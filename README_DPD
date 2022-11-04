@@ -1,0 +1,10 @@
+Summary of DPD changes (look for 'DPD edit' inscripts)
+
+- created a farm.z_arr which is array of depths that extends up to z=0
+- changed nansum() commands to integration with trapz() --
+		--> note this utilizes 2 lines before each integration to manually ignore NaN values
+
+- implemented analytical form of b_per_m array
+
+- other changes are related to above additions, e.g., changing how some arrays are declared in z-index
+to be consistent with farm.z_arr sizing
