@@ -39,8 +39,11 @@ global param
 % d_blade = blade erosion [h-1] (continuous); Multiplied by the
 % frBlade -> fraction of total as blade
     
-    M_blade = param.d_blade .* kelp.frBlade;  
-    M_tot = M_wave + M_blade;
+    M_blade = param.d_blade .* kelp.frBlade;
+% Anh Pham 11/2022: % d_frond = % [h-1] rate of senescence loss  rate of frond loss following senescence
+    M_frond = param.d_frond .* kelp.frBlade;
+     
+    M_tot = M_wave + M_blade + M_frond;
     
 % Ns at t+1
 % Because Ns is redistributed based on distribution of Nf -> we calculated
