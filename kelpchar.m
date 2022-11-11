@@ -2,9 +2,9 @@ function kelp = kelpchar(kelp,farm)
 % Calculate biological characteristics from Nf, Ns (known)
 %
 % OUTPUT:  
-%   Q (## UNITS ###)
-%   Biomass (## UNITS ###)
-%   depth resolved surface_area-to-biomass (## UNITS ###)
+%   Q (## UNITS ###) mg N / g-dry of biomass
+%   Biomass (## UNITS ###) g-dry of biomass
+%   depth resolved surface_area-to-biomass (## UNITS ###) sa2b [m2/g(wet)]
 %   height: total height (m)
 %   frBlade, fractional biomass that is blade = blade:frond (unitless)
 %

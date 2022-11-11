@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %  MAG0 - UCLA
-%  Version 0.1, A. Pham, D. Bianchi, D. Dauhajre, C. Fieder, 10/282022
+%  Version 0.1, A. Pham, D. Bianchi, D. Dauhajre, C. Fieder, 10/28/2022
 % 
 %  mag0 - simplidied model of macroalgal growth in 1-D
 %  volume-averaged; not tracking fronds
@@ -10,12 +10,13 @@
 %    Ns, macroalgal stored nitrogen, [mg N/m3]
 %    Nf, macroalgal fixed nitrogen, [mg N/m3]
 %  Environmental input:
-%    nitrate, ammonium, dissolved organic nitrogen: for uptake term
-%    seawater velociity and wave period: for uptake term
-%    temperature: for growth term
-%    wave height: for mortality term
-%    PAR and chla: for light attenuation
-%    magu: magnitude of horizontal velocity ### UNITS ###
+%    nitrate, ammonium, dissolved organic nitrogen: for uptake term (units
+%    below)
+%    seawater velocity (u: m/s) and wave period (Ts: seconds): for uptake term
+%    temperature: for growth term (Celcius)
+%    wave height: for mortality term (Hs: meters)
+%    PAR (W/m2) and chla (mg Chl-a m-3): for light attenuation
+%    magu: magnitude of horizontal velocity ### UNITS ### (m/s)
 %  Driving biogeochemical variables
 %    NO3, Concentration of nitrate in seawater, [umol NO3/m3]
 %    NO2, Concentration of nitrite in seawater, [umol NO3/m3]
@@ -54,7 +55,7 @@ for year = 1999:2000
     % kelp.fronds = load('fronds_3kg.mat'); kelp.fronds = kelp.fronds.fronds;
     
     % Simulation Output; preallocate space
-    kelp_b = NaN(1,length(time.timevec_Gr)); % integrated biomass (###UNITS###) per growth time step
+    kelp_b = NaN(1,length(time.timevec_Gr)); % integrated biomass (###UNITS###) per growth time step g-dry/m2?
     Nf_nt = NaN(farm.nz,length(time.timevec_Gr));
     Ns_nt = NaN(farm.nz,length(time.timevec_Gr));
     Bm_nt = NaN(farm.nz,length(time.timevec_Gr));

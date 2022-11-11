@@ -1,7 +1,7 @@
 function param = param_macrocystis
 % structure with the named parameters of the model
 
-    % Note: lookup table b_per_m.mat NOT USED
+    %% Note: lookup table b_per_m.mat NOT USED
     %       uses function "make_Bm.m" instead
     b_per_m = load('b_per_m');
     b_per_m = b_per_m.b_per_m;
@@ -15,7 +15,7 @@ function param = param_macrocystis
         'KsDON', 7.755e3,... % [umol N/m3]     
         'Qmax', 40,... % [mg N/g(dry)]         
         'Qmin', 10,... % [mg N/g(dry)]        
-        'umax', 0.2/24,... % [h-1]   
+        'umax', 0.2/24,... % [h-1]  % umax = Maximum growth rate
         'Tmin',14,... % [Celsius]
         'Tmax',20,... % [Celsius]
         'Tlim',23,... % [Celsius]
@@ -39,8 +39,8 @@ function param = param_macrocystis
         'Biomass_surfacearea_watercolumn', 10.9/1e4,... % [m2/g(wet)]
         'Biomass_surfacearea_canopy', 58.7/1e4,... % [m2/g(wet)]
         'Blade_stipe', [2.32 13.36 23.39],...
-        'MW_N', 14.006720, .... % [g/mol].
-	'z_canopy', -2,... %[m], threshold for 'canopy' biomass ber meter formulation;
+        'MW_N', 14.006720, .... % [g/mol]. MW = Molecular weights of nitrogen, nitrate, and ammonium
+	'z_canopy', -2,... %[m], threshold for 'canopy' biomass per meter formulation;
 	'B0', 0.05); %unit-less for make_Bm canopy profile, B0=const in subsurface 
         
 end

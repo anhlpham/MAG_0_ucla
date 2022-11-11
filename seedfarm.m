@@ -5,7 +5,8 @@ function kelp = seedfarm(farm)
 %   kelp with structured variables
 %       Nf (fixed nitrogen) mg N/m3
 %       Ns (stored nitrogen) mg N/m3   
-%       lastfrond: simulation hour at which last frond initiated
+%       lastfrond: simulation hour at which last frond initiated %%
+%       commented out the frond part for this version
 
 %% Initialize kelp state variables and characteristics
 global param
