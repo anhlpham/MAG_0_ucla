@@ -16,7 +16,10 @@ function farm = farmdesign
     farm.nz = length(farm.z_arr);
     
     % initial B/Q conditions
-    farm.seedingB = 3*1e3; % seeding biomass [g-dry m-2] ## CHECK UNITS ### (it said per meter)
+    farm.seedingB = 3*1e3; % seeding biomass [g-dry m-2] 
+    % ## CHECK UNITS ### (it said per meter)
+    % I think this should be g-dry/m^2 
+    % b/c you multiply it by a b_per_m which should have units of g-dry/m; the multiplication to get kelp.Nf in seedfarm.m should give you a mg N / m^3
     farm.seedingQ = 15; % seeding Q
     
     % 'canopy' starts at what depth below the surface

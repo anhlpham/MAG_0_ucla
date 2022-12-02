@@ -4,7 +4,7 @@ function kelp = kelpchar(kelp,farm)
 % OUTPUT:  
 %   Q (## UNITS ###) mg N / g-dry of biomass
 %   Biomass (## UNITS ###) g-dry of biomass
-%   depth resolved surface_area-to-biomass (## UNITS ###) sa2b [m2/g(wet)]
+%   depth resolved surface_area-to-biomass (## UNITS ###) sa2b [m^2/g(wet)]
 %   height: total height (m)
 %   frBlade, fractional biomass that is blade = blade:frond (unitless)
 %

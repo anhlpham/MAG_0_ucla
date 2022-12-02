@@ -25,7 +25,7 @@ function param = param_macrocystis
         'PAR_Kchla', 0.0138,... % [m2/mg chl-a]
         'PAR_KNf', 0.0001,... % [m2/mg N]
         'Hmax', 30,... % maximum height (m)
-        'Kh', 0.75,... % shape of biomass-to-length relationship (g-dry m-2?)
+        'Kh', 0.75,... % shape of biomass-to-length relationship (dimensionless or g-dry m-2 )
         'kcap', 7e3,... % space limited capacity (g-dry m-2)
         'b_per_m', b_per_m,... % vertical capacity in water column (mg N m-3)
         'd_dissolved', 0.002/24,... % [h-1] 0.002 d-1

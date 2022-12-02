@@ -55,7 +55,7 @@ for year = 1999:2000
     % kelp.fronds = load('fronds_3kg.mat'); kelp.fronds = kelp.fronds.fronds;
     
     % Simulation Output; preallocate space
-    kelp_b = NaN(1,length(time.timevec_Gr)); % integrated biomass (###UNITS###) per growth time step g-dry/m2?
+    kelp_b = NaN(1,length(time.timevec_Gr)); % integrated biomass (###UNITS###) per growth time step g-dry/m^2
     Nf_nt = NaN(farm.nz,length(time.timevec_Gr));
     Ns_nt = NaN(farm.nz,length(time.timevec_Gr));
     Bm_nt = NaN(farm.nz,length(time.timevec_Gr));
